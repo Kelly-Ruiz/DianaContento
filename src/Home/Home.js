@@ -1,4 +1,5 @@
 import './Home.css';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import MyBeliefs from './components/MyBeliefs';
 import NavBar from './components/NavBar';
@@ -10,6 +11,7 @@ function Home() {
     <Header></Header>
     <MyBeliefs></MyBeliefs>
     <OurPlans></OurPlans>
+    <Footer/>
     </>
   );
 }
