@@ -1,0 +1,116 @@
+.carousel{
+    width: 100%;
+  display: grid;
+  place-items: center;
+  height: 16rem;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+  
+  .slider {
+    --slide-width: 10rem;
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .slide {
+    --card-opacity: 0.3;
+    
+    display: none;
+    width: var(--slide-width);
+    /* aspect-ratio: 4 / 5; */
+    /* border-radius: 1rem;
+    border-top: 2px solid rgba(255, 255, 255,0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5); */
+    opacity: 1;
+    /* mix-blend-mode: overlay; */
+    
+  }
+  
+  .slide[data-type='active'] {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slide[data-type='before'] {
+    display: flex;
+    position: absolute;
+    scale: 0.8;
+    left: 0;
+    transform: translatex(-7rem);
+    justify-content: center;
+    
+    z-index: -1;
+    
+  }
+  
+  .slide[data-type='after'] {
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    scale: 0.8;
+    right: 0;
+    transform: translatex(7rem);
+    
+    z-index: -1;
+  }
+  
+  /* .num1 {
+    background-color: #E0A458;
+  }
+  
+  .num2 {
+    background-color: #FFEE93;
+  }
+  .num3 {
+    background-color: #8DAA91;
+  }
+  .num4 {
+    background-color: #E3D87E;
+  }
+  .num5 {
+    background-color: #92140C;
+  }
+  .num6 {
+    background-color: #F7A9A8;
+  }
+  .num7 {
+    background-color: #613F75;
+  }
+  .num8 {
+    background-color: #DEA47E;
+  } */
+  
+  [data-btn] {  
+    border: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    transition: scale 200ms ease;
+    background: url("../../../../../images/next\ carrousel.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  [data-btn="previos"]{
+    transform: scaleX(-1);
+  }
+  
+  [data-btn]:hover {
+    scale: 1.1;
+  }
+
+  .carousel .slide img{
+    width: 90%;
+    margin: auto;
+  }
+
+.w-fit{
+    width: fit-content;
+}

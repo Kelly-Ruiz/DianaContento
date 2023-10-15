@@ -1,0 +1,11 @@
+.white{
+    color: white;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.p-n-b{
+    padding: 10rem 6rem 1rem 6rem;
+}

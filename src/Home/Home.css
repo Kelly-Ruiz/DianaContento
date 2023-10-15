@@ -1,0 +1,40 @@
+
+
+html, body{
+    margin: 0;
+    font-family: 'myriadPro';
+    box-sizing: border-box;
+}
+
+*{
+    font-family: inherit;
+    box-sizing: inherit;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.p-0{
+    padding: 0;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-start{
+    align-items: start;
+}

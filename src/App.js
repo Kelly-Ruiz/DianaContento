@@ -5,6 +5,7 @@ import { auth } from './Firebase/firebase';
 import './App.css';
 import { Login } from './Components/Login/Login';
 import { Navbar } from './Components/Navbar/Navbar';
+import { Home } from './Home/Home';
 
 function App() {
   const user = auth.currentUser
@@ -23,6 +24,7 @@ function App() {
       {user &&
         <button onClick={submit}>Log out</button>
       }
+      <Home></Home>
     </>
   );
 }

@@ -1,0 +1,20 @@
+#premiumBtn div{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+#premiumBtn div p{
+    width: max-content;
+    
+}
+
+.crown-icon{
+    height: fit-content;
+}
+
+nav{
+    height: 75px;
+}

@@ -1,0 +1,15 @@
+.section-beliefs{
+    color: #00B2AA;
+    font-size: large;
+    display: flex;
+    align-items: center;
+}
+
+.section-beliefs img{
+    max-height: 80vh;
+}
+
+.section-beliefs h2{
+    font-weight: bold;
+    text-align: center;
+}
