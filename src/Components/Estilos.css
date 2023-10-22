@@ -1,0 +1,22 @@
+.title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text-green {
+    color: #00b2aa;
+}
+
+.text-shadow {
+    text-shadow: 0.1rem 0.1rem 0.2rem #000000ba;
+}
+
+.box-shadow {
+    box-shadow: 0.1rem 0.1rem 0.2rem #000000ba;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 640px) {
+}
