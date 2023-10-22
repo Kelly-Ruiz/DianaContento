@@ -1,12 +1,9 @@
-import sponsor1 from "../../../../../../images/sponsor carrousel.webp"
-import "./OurPlansCarousel.css"
-import "./carousel.js"
-
-function OurPlansCarousel() {
+import sponsor1 from "../../../../images/sponsor carrousel.webp"
+function AwakenCarrousel() {
     return (
         <article className="m-auto w-fit">
 
-            <h2 class="bold subtitleBlack text-3xl">Our sponsoring brands</h2>
+            <h2 class="bold subtitleBlack text-3xl">Our members' testimonials</h2>
 
             <div class="carousel d-flex">
                 <div class="slider-wrapper">
@@ -39,10 +36,10 @@ function OurPlansCarousel() {
                     </div>
                     <button data-btn='next'></button>
                 </div>
-
+                
             </div>
         </article>
     );
 }
 
-export { OurPlansCarousel };
+export default AwakenCarrousel;
