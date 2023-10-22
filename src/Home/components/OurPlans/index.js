@@ -6,11 +6,11 @@ import "./OurPlans.css"
 function OurPlans() {
     return (
         <>
-            <section class="OurPlansSection">
-                <div class="toCenterSection">
-                    <h2 class="titleBlack">Our plans</h2>
-                    <article class="">
-                        <div class="d-flex justify-content-around">
+            <section className="OurPlansSection flex items-center justify-center">
+                <div className="toCenterSection">
+                    <h2 className="titleBlack py-5">Our plans</h2>
+                    <article className="">
+                        <div className="grid grid-cols-3 gap-16">
                             <PlanCard level="premium"/>
                             <PlanCard level="ultimate"/>
                             <IconColumn/>

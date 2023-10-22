@@ -7,17 +7,16 @@ import "./PlanCard.css"
 
 function PlanCard({ level }) {
     return (
-        <section class="white d-flex justify-content-center col-4 premium-plan">
-            <div class="w-100 pricing-card">
+        <section class="white flex justify-center w-full">
+            <div class="w-full pricing-card">
 
-                <div
-                    class="position-relative pricing d-flex flex-column justify-content-between align-items-center h-100">
-                    <img class="titleBG" src={titleBg} alt="" />
-                    <div class="titleContent py-4 pb-4">
+                <div class="relative pricing flex flex-col justify-between items-center h-full w-full">
+                    <img class="absolute pt-4 h-[9rem]" src={titleBg} alt="" />
+                    <div class="titleContent py-9 pb-4">
                         {level == "premium" ?
                             <>
-                                <h2>Premium</h2>
-                                <ul id="premiumRaiting" class="plan-rating d-flex py-2">
+                                <h2 className="text-2xl">Premium</h2>
+                                <ul id="premiumRaiting" class="plan-rating flex py-2">
                                     <li><img src={star} alt="star" /></li>
                                     <li><img src={star} alt="star" /></li>
                                     <li><img src={star} alt="star" /></li>
@@ -30,8 +29,8 @@ function PlanCard({ level }) {
                             </>
                             :
                             <>
-                                <h2>Ultimate</h2>
-                                <ul id="premiumRaiting" class="plan-rating d-flex py-2">
+                                <h2 className="text-2xl">Ultimate</h2>
+                                <ul id="premiumRaiting" class="plan-rating flex py-2">
                                     <li><img src={star} alt="star" /></li>
                                     <li><img src={star} alt="star" /></li>
                                     <li><img src={star} alt="star" /></li>
@@ -44,16 +43,16 @@ function PlanCard({ level }) {
                             </>
                         }
                     </div>
-                    <ul class="pricing p-green benefits-list m-0 p-0 d-flex align-items-start flex-column">
+                    <ul class="pricing p-green benefits-list mt-3 flex items-start flex-col">
 
-                        <li class="d-flex justify-content-center align-items-center">
+                        <li class="flex justify-center items-center">
                             <img src={check} alt="check" />
                             Meals plans
                         </li>
-                        <li class="d-flex justify-content-center align-items-center">
+                        <li class="flex justify-center items-center">
                             <img src={check} alt="check" />
                             Accompaniment</li>
-                        <li class={`d-flex justify-content-center align-items-center  ${level == "premium" && "x"}`}>
+                        <li class={`flex justify-center items-center  ${level == "premium" && "x"}`}>
                             {level == "premium" ?
                                 <img src={xIcon} alt="check x" />
                                 :
@@ -63,7 +62,7 @@ function PlanCard({ level }) {
 
                             Workouts Routines
                         </li>
-                        <li class={`d-flex justify-content-center align-items-center ${level == "premium" && "x"}`}>
+                        <li class={`flex justify-center items-center ${level == "premium" && "x"}`}>
                             {level == "premium" ?
                                 <img src={xIcon} alt="check" />
                                 :
@@ -74,19 +73,19 @@ function PlanCard({ level }) {
                         </li>
 
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center flex-column pb-4 pt-2">
+                    <div class="flex items-center justify-center flex-col pb-4 pt-2">
                         {
                             level == "premium" ?
                                 <>
                                     <h3>$200.00</h3>
                                     <span>USD MONTH</span>
-                                    <button>Buy Now</button>
+                                    <button className="mt-2">Buy Now</button>
                                 </>
                                 :
                                 <>
                                     <h3>$300.00</h3>
                                     <span>USD MONTH</span>
-                                    <button>Buy Now</button>
+                                    <button className="mt-2">Buy Now</button>
                                 </>
                         }
 
