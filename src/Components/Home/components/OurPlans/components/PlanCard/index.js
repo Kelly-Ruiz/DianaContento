@@ -1,98 +1,40 @@
-import titleBg from "../../../../../../images/titlebg.webp"
-import star from "../../../../../../images/star.webp"
-import grayStar from "../../../../../../images/graystar.webp"
-import check from "../../../../../../images/check.png"
-import xIcon from "../../../../../../images/x.png"
 import "./PlanCard.css"
+import { Box, Button, Card, Divider } from "@mui/material"
 
 function PlanCard({ level }) {
     return (
-        <section class="white flex justify-center w-full">
-            <div class="w-full pricing-card">
+        <Card className="w-72 p-6 flex flex-col gap-4 justify-center items-center rounded-2xl bg-gradient-to-b from-MainColor to-LightColor">
+            <Box className="bg-white shadow-md rounded-[1.5rem] w-52 py-2 shadow-[#00000060] text-MainColor">
+                <h3 className="text-center font-bold italic text-2xl">
+                    {level == "premium" ? "Premium" : "Ultimate"}
+                </h3>
+                <ul id="premiumRaiting" className="plan-rating flex  font-black cursor-default">
+                    <li className="">★</li>
+                    <li>★</li>
+                    <li>★</li>
+                    <li className={level == "premium" ? "text-gray-300" : ""}>★</li>
+                    <li className={level == "premium" ? "text-gray-300" : ""}>★</li>
+                </ul>
+            </Box>
+            <Divider className="p-[0.4px] opacity-100 w-[80%] bg-white" />
+            <div className="text-center flex flex-col gap-3">
+                <h4 className="font-bold text-2xl">
+                    {level == "premium" ? "$6,7" : "$10"}
+                    <span className="italic">a day</span></h4>
+                <Divider className="opacity-100 w-[100%] bg-white" />
+                <div>
+                    <h5 className="text-center text-lg">
+                        {level == "premium" ? "$200.000" : "$300.000"}
+                    </h5>
+                    <p className="text-[#00000080] text-xs">PER MONTH</p>
 
-                <div class="relative pricing flex flex-col justify-between items-center h-full w-full">
-                    <img class="absolute pt-4 h-[9rem]" src={titleBg} alt="" />
-                    <div class="titleContent py-9 pb-4">
-                        {level == "premium" ?
-                            <>
-                                <h2 className="text-2xl">Premium</h2>
-                                <ul id="premiumRaiting" class="plan-rating flex py-2">
-                                    <li><img src={star} alt="star" /></li>
-                                    <li><img src={star} alt="star" /></li>
-                                    <li><img src={star} alt="star" /></li>
-                                    <li><img src={grayStar} alt="star" /></li>
-                                    <li><img src={grayStar} alt="star" /></li>
-                                </ul>
-                                <a href="">
-                                    <h4 class="py-2">READ MORE</h4>
-                                </a>
-                            </>
-                            :
-                            <>
-                                <h2 className="text-2xl">Ultimate</h2>
-                                <ul id="premiumRaiting" class="plan-rating flex py-2">
-                                    <li><img src={star} alt="star" /></li>
-                                    <li><img src={star} alt="star" /></li>
-                                    <li><img src={star} alt="star" /></li>
-                                    <li><img src={star} alt="star" /></li>
-                                    <li><img src={star} alt="star" /></li>
-                                </ul>
-                                <a href="">
-                                    <h4 class="py-2">READ MORE</h4>
-                                </a>
-                            </>
-                        }
-                    </div>
-                    <ul class="pricing p-green benefits-list mt-3 flex items-start flex-col">
-
-                        <li class="flex justify-center items-center">
-                            <img src={check} alt="check" />
-                            Meals plans
-                        </li>
-                        <li class="flex justify-center items-center">
-                            <img src={check} alt="check" />
-                            Accompaniment</li>
-                        <li class={`flex justify-center items-center  ${level == "premium" && "x"}`}>
-                            {level == "premium" ?
-                                <img src={xIcon} alt="check x" />
-                                :
-                                <img src={check} alt="check" />
-
-                            }
-
-                            Workouts Routines
-                        </li>
-                        <li class={`flex justify-center items-center ${level == "premium" && "x"}`}>
-                            {level == "premium" ?
-                                <img src={xIcon} alt="check" />
-                                :
-                                <img src={check} alt="check" />
-
-                            }
-                            Workouts mon-Friday
-                        </li>
-
-                    </ul>
-                    <div class="flex items-center justify-center flex-col pb-4 pt-2">
-                        {
-                            level == "premium" ?
-                                <>
-                                    <h3>$200.00</h3>
-                                    <span>USD MONTH</span>
-                                    <button className="mt-2">Buy Now</button>
-                                </>
-                                :
-                                <>
-                                    <h3>$300.00</h3>
-                                    <span>USD MONTH</span>
-                                    <button className="mt-2">Buy Now</button>
-                                </>
-                        }
-
-                    </div>
                 </div>
             </div>
-        </section>
+            <Divider className="p-[0.4px] opacity-100 w-[80%] bg-white" />
+            <Button className="bg-white text-MainColor rounded-full text-xl font-bold px-10 shadow-md shadow-[#00000060]" variant="contained">
+                Buy Now
+            </Button>
+        </Card>
     );
 }
 

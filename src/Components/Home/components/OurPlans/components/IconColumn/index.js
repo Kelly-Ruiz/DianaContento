@@ -4,8 +4,8 @@ import plan3 from "../../../../../../images/plan icon 3.webp"
 
 function IconColumn() {
     return (
-        <section class="col-2 ourplans-icon">
-            <ul class="d-flex flex-column align-items-center h-100">
+        <section className="col-2 ourplans-icon">
+            <ul className="d-flex flex-column align-items-center h-100">
                 <li>
                     <img src={plan1} alt="Height" />
                 </li>

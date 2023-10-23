@@ -3,34 +3,34 @@ function AwakenCarrousel() {
     return (
         <article className="m-auto w-fit">
 
-            <h2 class="bold subtitleBlack text-3xl">Our members' testimonials</h2>
+            <h2 className="bold subtitleBlack text-3xl">Our members' testimonials</h2>
 
-            <div class="carousel d-flex">
-                <div class="slider-wrapper">
+            <div className="carousel d-flex">
+                <div className="slider-wrapper">
                     <button data-btn='previos'></button>
-                    <div class="slider">
-                        <div class="slide num1" data-type="before">
+                    <div className="slider">
+                        <div className="slide num1" data-type="before">
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
-                        <div class="slide num2" data-type="active">
+                        <div className="slide num2" data-type="active">
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
-                        <div class="slide num3" data-type="active">
+                        <div className="slide num3" data-type="active">
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
-                        <div class="slide num4" data-type="active">
+                        <div className="slide num4" data-type="active">
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
-                        <div class="slide num5" data-type="active">
+                        <div className="slide num5" data-type="active">
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
-                        <div class="slide num6" data-type="after">
+                        <div className="slide num6" data-type="after">
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
-                        <div class="slide num7" data-type>
+                        <div className="slide num7" data-type>
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
-                        <div class="slide num8">
+                        <div className="slide num8">
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
                     </div>

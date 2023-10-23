@@ -11,6 +11,8 @@ import premiumBg from "../../../../images/premium b.webp";
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../Estilos.css'
 import './Login.css';
+import CrownIcon from './Images/CrownIcon';
+import { Button } from '@mui/material';
 
 function Login() {
     const navegate = useNavigate();
@@ -82,13 +84,26 @@ function Login() {
 
     return (
         <>
-            <button className="nav-link active h-100" onClick={abrirModal}>
-                <img className="h-100" src={premiumBg} alt="premium" />
-                <div className="position-absolute">
+            <Button 
+            className="bg-MainColor hover:bg-DarkColor opacity-90 rounded-xl" 
+            startIcon={<CrownIcon className="w-10" color="#fff" />} 
+            variant="contained"
+            onClick={abrirModal}
+            
+            >
+                Premium Zone
+            </Button>
+            {/* <button className="h-full" onClick={abrirModal}>
+                <img className="h-full" src={premiumBg} alt="premium" />
+                <div className="absolute">
+
+                    <CrownIcon className="w-10" color="#fff" />
+
+
                     <img src={premiumIcon} alt="crown" className="crown-icon" />
-                    <p className="m-0 px-1">Premium zone</p>
+                    <p className="m-0 px-1 whitespace-nowrap">Premium zone</p>
                 </div>
-            </button>
+            </button> */}
 
 
             <Modal show={show}>

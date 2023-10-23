@@ -4,7 +4,7 @@ function Header() {
     return (
         <header>
             <figure>
-                <img class="w-100" src={firstBg} alt="Woman doing exercise" />
+                <img className="w-100" src={firstBg} alt="Woman doing exercise" />
 
             </figure>
         </header>
