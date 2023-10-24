@@ -6,7 +6,7 @@ function MyBeliefs() {
         <section className="flex section-beliefs justify-center overflow-hidden">
             <div className="h-[40rem] max-w-[70rem] flex justify-center items-center relative">
                 <article className="w-[70%]">
-                    <h2 className="text-[3rem] italic">My beliefs</h2>
+                    <h2 className="text-[3rem] p-4 italic">My beliefs</h2>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer
                         adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
                         volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis

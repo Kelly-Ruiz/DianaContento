@@ -39,7 +39,7 @@ function NavBar() {
     }
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center fixed top-0 left-0 bg-white w-full z-40">
             <nav className="h-18 w-[70rem] ">
 
                 {!user && // SIN USUARIO LOGEADO

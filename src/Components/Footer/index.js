@@ -5,14 +5,17 @@ import "./Footer.css"
 
 function Footer() {
     return (
-        <footer style={{ backgroundImage: `url(${footerBg})`, backgroundSize:"cover" }}>
-            <div className='d-flex align-items-center justify-content-between p-n-b w-100'>
-                <img className="mw-100" src={logo} alt="Logo" />
-                <p className=' text-end white mw-50'>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet, </p>
-
+        <footer className='bg-black relative overflow-hidden '>
+            <div className='absolute bottom-0 bg-fixed bg-bottom w-full h-full opacity-30 blur-sm' style={{ backgroundImage: `url(${footerBg})` }}>
+                <div className='w-full h-full bg-gradient-to-t from-[#00000080]'/>
+                </div>
+            {/* <img src={footerBg} className='absolute top-0 opacity-30 blur-sm' /> */}
+            <div className='flex items-center justify-content-center h-[30rem]'>
+                <img className="mw-100 invert" src={logo} alt="Logo" />
             </div>
+            
         </footer>
     )
 }
 
-export {Footer};
+export { Footer };

@@ -2,9 +2,9 @@ import firstBg from "../../../../images/first bg.webp"
 
 function Header() {
     return (
-        <header>
+        <header className="">
             <figure>
-                <img className="w-100" src={firstBg} alt="Woman doing exercise" />
+                <img className="w-full mt-8" src={firstBg} alt="Woman doing exercise" />
 
             </figure>
         </header>

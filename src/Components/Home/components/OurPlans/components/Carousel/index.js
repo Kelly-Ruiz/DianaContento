@@ -1,16 +1,20 @@
+// import { useState } from "react";
 import sponsor1 from "../../../../../../images/sponsor carrousel.webp"
 import "./OurPlansCarousel.css"
 import "./carousel.js"
+import { panningNext, panningPrev } from "./carousel.js";
 
 function OurPlansCarousel() {
+    // const [page, setPage] = useState(1);
+
     return (
         <article className="m-auto w-fit">
 
             <h2 className="bold subtitleBlack text-3xl">Our sponsoring brands</h2>
 
-            <div className="carousel d-flex">
+            <div className="carousel flex">
                 <div className="slider-wrapper">
-                    <button data-btn='previos'></button>
+                    <button onClick={panningPrev} data-btn='previos'></button>
                     <div className="slider">
                         <div className="slide num1" data-type="before">
                             <img src={sponsor1} alt="sponsor1" />
@@ -37,7 +41,7 @@ function OurPlansCarousel() {
                             <img src={sponsor1} alt="sponsor1" />
                         </div>
                     </div>
-                    <button data-btn='next'></button>
+                    <button onClick={panningNext} data-btn='next'></button>
                 </div>
 
             </div>

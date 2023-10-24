@@ -3,8 +3,7 @@ import gsap from "gsap";
 const btn = document.querySelectorAll('[data-btn]');
 const test = document.querySelector('#test');
 
-function panningNext() {
-  
+export function panningNext() {
   const slides = document.querySelectorAll('.slide');
   const container = document.querySelector('.slider');
   slides.forEach(e => {
@@ -54,7 +53,7 @@ function panningNext() {
 };
 
 
-function panningPrev() {
+export function panningPrev() {
   const slides = document.querySelectorAll('.slide');
   const container = document.querySelector('.slider');
   slides.forEach(e => {
@@ -95,7 +94,7 @@ function panningPrev() {
 };
 
 
-function render(slides, container) {
+export function render(slides, container) {
   container.innerHTML = '';
   for (let slide of slides) {
     container.innerHTML += slide.outerHTML
