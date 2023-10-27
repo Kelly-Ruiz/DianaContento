@@ -10,9 +10,9 @@ function Home() {
   return (
     <>
       <NavBar />
-      <Header></Header>
-      <MyBeliefs></MyBeliefs>
-      <OurPlans></OurPlans>
+      <Header/>
+      <MyBeliefs/>
+      <OurPlans/>
       <Footer />
     </>
   );

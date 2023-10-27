@@ -1,0 +1,28 @@
+.information-p2{
+    background: url('../../../../images/ourplansbg.webp');
+    background-size: cover;
+}
+
+.phrase{
+    line-height: 1em;
+}
+
+.plans-btn{
+    background-color: #00b2aa;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+}
+
+.dianaFullbody{
+    height: 200%;
+    width: 200%;
+    margin-top: -130%;
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 640px){
+
+}

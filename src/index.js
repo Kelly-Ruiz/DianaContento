@@ -11,6 +11,7 @@ import { Dashboard } from './Components/DashBoard/Dashboard';
 import App from './App';
 import './index.css';
 import { StyledEngineProvider } from '@mui/styled-engine';
+import { Plans } from './Components/Plans/Plans';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/Aboutus' element={<About />} />
+        <Route path='/plans' element={<Plans />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/dashboard' element={<Dashboard />} />
