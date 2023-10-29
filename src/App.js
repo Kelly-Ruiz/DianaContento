@@ -1,9 +1,8 @@
 import { signOut } from 'firebase/auth';
 import { auth } from './Firebase/firebase';
-
 import { Home } from './Components/Home/Home'
-
 import './App.css';
+import { Providers } from './Providers';
 
 function App() {
   const user = auth.currentUser
@@ -12,9 +11,9 @@ function App() {
 
 
   return (
-    <>
+    <Providers>
       <Home />
-    </>
+    </Providers>
   );
 }
 

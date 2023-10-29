@@ -1,6 +1,5 @@
 import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, inMemoryPersistence, setPersistence } from 'firebase/auth';
 import { auth } from '../../../../Firebase/firebase';
-import { Modal } from 'react-bootstrap';
 import { CgClose } from 'react-icons/cg';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +11,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../Estilos.css'
 import './Login.css';
 import CrownIcon from './Images/CrownIcon';
-import { Button } from '@mui/material';
+import { Button, Modal } from '@mui/material';
+import { useLoginContext } from '../../../../Providers';
 
 function Login() {
     const navegate = useNavigate();
@@ -51,6 +51,7 @@ function Login() {
     }
 
     const [show, setShow] = useState(false);
+    const {openLogin, setOpenLogin} = useLoginContext();
     const abrirModal = () => setShow(!show)
     const cerrarModal = () => setShow(!show)
 
@@ -88,7 +89,7 @@ function Login() {
             className="bg-MainColor hover:bg-DarkColor opacity-90 rounded-xl" 
             startIcon={<CrownIcon className="w-10" color="#fff" />} 
             variant="contained"
-            onClick={abrirModal}
+            onClick={setOpenLogin}
             
             >
                 Premium Zone
@@ -106,7 +107,7 @@ function Login() {
             </button> */}
 
 
-            <Modal show={show}>
+            <Modal className='flex justify-center items-center' onClose={cerrarModal} open={show}>
                 <div className='log-in-form self-center'>
 
                     <div className='relative'>

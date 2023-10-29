@@ -5,15 +5,16 @@ import { Footer } from '../Footer';
 import { NavBar } from '../NavBar';
 
 import './Home.css';
+import Layout from '../../Layout';
 
 function Home() {
   return (
     <>
-      <NavBar />
-      <Header/>
-      <MyBeliefs/>
-      <OurPlans/>
-      <Footer />
+      <Layout>
+        <Header />
+        <MyBeliefs />
+        <OurPlans />
+      </Layout>
     </>
   );
 }

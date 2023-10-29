@@ -5,15 +5,14 @@ import { NavBar } from "../NavBar";
 
 import './About.css';
 import { Reviews } from "./Components/VideoH/Reviews";
+import Layout from "../../Layout";
 
 function About() {
     return (
-        <>
-            <NavBar />
+        <Layout>
             <Reviews />
             <Information />
-            <Footer />
-        </>
+        </Layout>
     );
 }
 
