@@ -73,26 +73,33 @@ function NavBar() {
                     }
 
                     {user &&
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 h-100 w-100 d-flex justify-content-between">
-                            <div className="d-flex">
-                                <li className="nav-item px-4">
-                                    <a className="nav-link active h-100 d-flex align-items-center"
-                                        href="">Plans</a>
+                        <ul className="py-2 w-full h-full px-4 flex justify-between items-center">
+                            <div className="flex items-center uppercase font-semibold text-gray-600">
+                                <li className="mr-4">
+                                    <a className="h-10" href="/" rel="home">
+                                        <img className="h-14" src={logo} alt="logo" />
+                                    </a>
                                 </li>
-                                <li className="nav-item px-4">
-                                    <a className="nav-link active h-100 d-flex align-items-center"
-                                        href="/Aboutus">About us</a>
-                                </li>
-                            </div>
-                            <li className="nav-item h-100">
-                                <a className="nav-link active p h-100" href="/" rel="home">
-                                    <img className="h-100" src={logo} alt="logo" />
+                                <a className="h-14 flex items-center"
+                                    href="/plans"
+                                >
+                                    <li className="w-28 h-full flex justify-center items-center hover:bg-[#00000020] rounded-xl transition-all duration-400">
+                                        Plans
+                                    </li>
                                 </a>
-                            </li>
-                            <li className="nav-item position-relative" id="premiumBtn">
+                                <a className="h-14 flex items-center"
+                                    href="/Aboutus">
+                                    <li className="w-28 h-full flex items-center justify-center hover:bg-[#00000020] rounded-xl transition-all duration-400">
+                                        About us
+                                    </li>
+                                </a>
+                            </div>
 
-                                <button onClick={anySignOut}>Log out</button>
-                            </li>
+                            <Button
+                                className="w-28 h-full flex items-center opacity-60 justify-center hover:bg-[#00000020] rounded-xl transition-all duration-400 text-gray-600 hover:opacity-100"
+                                onClick={anySignOut}>
+                                Log out
+                            </Button>
                         </ul>
                     }
                 </nav>

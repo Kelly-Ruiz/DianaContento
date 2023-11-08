@@ -12,10 +12,12 @@ import App from './App';
 import './index.css';
 import { StyledEngineProvider } from '@mui/styled-engine';
 import { Plans } from './Components/Plans/Plans';
+import { Providers } from './Providers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StyledEngineProvider injectFirst>
+    <Providers>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
@@ -26,6 +28,7 @@ root.render(
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
+    </Providers>
   </StyledEngineProvider>
 );
 

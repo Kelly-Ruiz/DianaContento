@@ -1,13 +1,19 @@
 import React from 'react';
-import { NavBar } from '../NavBar';
 import './Dashboard.css';
+import DashTabs from './DashTabs';
+import DashNav from './DashNav';
 
 function Dashboard() {
     return(
-        <>
-        <NavBar />
+        <div className=' flex'>
+        <DashTabs/>
+        <div>
+        <DashNav/>
         <p>DashBoard, perfil creado y autenticado</p>
-        </>
+
+        </div>
+        
+        </div>
     );
 }
 

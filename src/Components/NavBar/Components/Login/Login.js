@@ -51,7 +51,10 @@ function Login() {
     }
 
     const [show, setShow] = useState(false);
+    console.log(useLoginContext());
     const {openLogin, setOpenLogin} = useLoginContext();
+    console.log("1132135");
+    // const [openLogin, setOpenLogin] = useState(false)
     const abrirModal = () => setShow(!show)
     const cerrarModal = () => setShow(!show)
 
