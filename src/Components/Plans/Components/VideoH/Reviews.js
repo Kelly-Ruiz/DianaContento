@@ -1,9 +1,9 @@
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
 
-function Reviews() {
+function Reviews({transparent}) {
     return (
-        <div className="bg-[#000000dd] min-h-[20rem] flex flex-col justify-center items-center p-5">
+        <div className={`${!transparent && "bg-[#000000dd]"} min-h-[20rem] flex flex-col justify-center items-center p-5`}>
             <h2 className="text-white text-3xl font-bold">Few user experience</h2>
             <div className="w-[52rem] py-16 flex justify-center items-center gap-4">
                 <Card sx={{ maxWidth: 345 }}>

@@ -10,8 +10,8 @@ import Layout from "../../Layout";
 function About() {
     return (
         <Layout>
-            <Reviews />
             <Information />
+            {/* <Reviews /> */}
         </Layout>
     );
 }

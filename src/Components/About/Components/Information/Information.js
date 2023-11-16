@@ -3,6 +3,8 @@ import './Information.css';
 import '../../../Estilos.css';
 
 import dianaFullbody from "./Images/DianaCuerpoentero.webp"
+import { Reviews } from "../../../Plans/Components/VideoH/Reviews";
+
 
 function Information() {
     return (
@@ -18,7 +20,7 @@ function Information() {
                 </div>
             </section>
 
-            <section className="flex justify-center information-p2 overflow-hidden py-12">
+            <section className="flex flex-col items-center justify-center information-p2 overflow-hidden py-12">
                 <div className="w-[72rem]">
                     <div className="flex flex-col items-end justify-end">
                         <p className="phrase w-[60rem] title text-green text-shadow text-right text-5xl lg:text-7xl my-4">
@@ -32,7 +34,7 @@ function Information() {
                         <img src={dianaFullbody} className="absolute scale-[200%] left-[-15rem] top-50 opacity-10 grayscale" />
                     </div>
                 </div>
-
+                <Reviews transparent={true} />
             </section>
         </>
     );

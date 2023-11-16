@@ -9,9 +9,9 @@ import Layout from "../../Layout";
 
 function Plans() {
     return (
-        <Layout>
-            <Reviews />
+        <Layout transparent={true}>
             <Information />
+            <Reviews transparent={true} />
         </Layout>
     );
 }

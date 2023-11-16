@@ -32,7 +32,7 @@ function Information() {
     const level = "premium";
     return (
 
-        <section className="flex justify-center flex-col items-center information-p2 overflow-hidden py-12">
+        <section className="flex justify-center flex-col items-center  overflow-hidden py-12">
             <div className="max-w-[72rem] w-[72rem]">
                 <Card className="w-full p-6 flex flex-row gap-4 justify-center items-center rounded-2xl bg-gradient-to-r from-[#D9F3F1] to-[#6BD2CD]">
                     <h2 className="text-[5rem] font-bold italic w-min px-8">Our Plans</h2>
