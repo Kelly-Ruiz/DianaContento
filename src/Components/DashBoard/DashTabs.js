@@ -73,10 +73,10 @@ export default function DashTabs() {
   };
 
   return (
-    <div className='justify-center items-center flex flex-col h-screen bg-[#333] text-white'>
-      <img className='w-14' src={logo} />
+    <div className='justify-center items-center flex flex-col h-screen bg-gradient-to-b from-black grad via-[#4C4C4C] to-black text-white'>
+      <img className='w-14 mb-10' src={logo} />
       <Tabs
-        // className="h-[80%] tabslist"
+        className="h-[60%] tabslist"
         orientation="vertical"
         variant="scrollable"
         textColor="secondary"
@@ -90,11 +90,11 @@ export default function DashTabs() {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider' }}
       >
-        <StyledTab className="transition-all duration-500 w-min m-auto p-3" icon={<HomeIcon/>} label="HOME" {...a11yProps(0)} />
-        <StyledTab className="transition-all duration-500 w-min m-auto p-3" icon={<TrainingIcon />} label="TRAINING" {...a11yProps(1)} />
-        <StyledTab className="transition-all duration-500 w-min m-auto p-3" icon={<NutritionIcon />} label="NUTRITION" {...a11yProps(2)} />
-        <StyledTab className="transition-all duration-500 w-min m-auto p-3" icon={<ChallengesIcon />} label="CHALLENGES" {...a11yProps(3)} />
-        <StyledTab className="transition-all duration-500 w-min m-auto p-3" icon={<EventsIcon />} label="EVENTS" {...a11yProps(4)} />
+        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<HomeIcon className="w-10"/>} label="HOME" {...a11yProps(0)} />
+        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<TrainingIcon className="w-10"/>} label="TRAINING" {...a11yProps(1)} />
+        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<NutritionIcon className="w-10"/>} label="NUTRITION" {...a11yProps(2)} />
+        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<ChallengesIcon className="w-10"/>} label="CHALLENGES" {...a11yProps(3)} />
+        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<EventsIcon className="w-10"/>} label="EVENTS" {...a11yProps(4)} />
       </Tabs>
       {/* <TabPanel value={value} index={0}>
         Item One

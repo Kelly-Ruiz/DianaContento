@@ -2,17 +2,16 @@ import React from 'react';
 import './Dashboard.css';
 import DashTabs from './DashTabs';
 import DashNav from './DashNav';
+import DashboardHome from './components/DashboardHome';
 
 function Dashboard() {
-    return(
-        <div className=' flex'>
-        <DashTabs/>
-        <div>
-        <DashNav/>
-        <p>DashBoard, perfil creado y autenticado</p>
-
-        </div>
-        
+    return (
+        <div className='flex h-screen overflow-hidden'>
+            <DashTabs />
+            <div className='w-full'>
+                <DashNav />
+                <DashboardHome/>
+            </div>
         </div>
     );
 }

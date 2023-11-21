@@ -2,7 +2,7 @@ import React from 'react'
 
 function HomeIcon({ color, className }) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.22 46.84">
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.22 46.84">
       <title>Menu 1</title>
       <g id="Layer_2" data-name="Layer 2">
         <g id="Capa_4" data-name="Capa 4">
