@@ -43,7 +43,7 @@ function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
     'aria-controls': `vertical-tabpanel-${index}`,
-    color: "#ff0000"
+    // color: "#ff0000"
   };
 }
 
@@ -57,7 +57,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     color: '#D9F3F1',
     '&.Mui-selected': {
       color: '#00B2AA',
-      opacity: 1
+      opacity: 1,
     },
     '&.Mui-focusVisible': {
       backgroundColor: '#00B2AA',
@@ -65,11 +65,12 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
   }),
 );
 
-export default function DashTabs() {
+export default function DashTabs({setSection}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    setSection(newValue);
   };
 
   return (
@@ -82,7 +83,9 @@ export default function DashTabs() {
         textColor="secondary"
         TabIndicatorProps={{
           style: {
-            backgroundColor: "#00B2AA"
+            backgroundColor: "#D9F3F1",
+            width: "100%",
+            zIndex: 0
           }
         }}
         value={value}
@@ -90,11 +93,26 @@ export default function DashTabs() {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider' }}
       >
-        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<HomeIcon className="w-10"/>} label="HOME" {...a11yProps(0)} />
-        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<TrainingIcon className="w-10"/>} label="TRAINING" {...a11yProps(1)} />
-        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<NutritionIcon className="w-10"/>} label="NUTRITION" {...a11yProps(2)} />
-        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<ChallengesIcon className="w-10"/>} label="CHALLENGES" {...a11yProps(3)} />
-        <StyledTab className="transition-all duration-500 w-20 m-auto p-3" icon={<EventsIcon className="w-10"/>} label="EVENTS" {...a11yProps(4)} />
+        <StyledTab 
+        className="transition-all duration-500 w-20 m-auto p-3 z-10" 
+        icon={<HomeIcon color={value == 0 && "#00B2AA"} className="w-10"/>} 
+        label="HOME" {...a11yProps(0)} />
+        <StyledTab 
+        className="transition-all duration-500 w-20 m-auto p-3 z-10" 
+        icon={<TrainingIcon color={value == 1 && "#00B2AA"} className="w-10"/>} 
+        label="TRAINING" {...a11yProps(1)} />
+        <StyledTab 
+        className="transition-all duration-500 w-20 m-auto p-3 z-10" 
+        icon={<NutritionIcon color={value == 2 && "#00B2AA"} className="w-10"/>} 
+        label="NUTRITION" {...a11yProps(2)} />
+        <StyledTab 
+        className="transition-all duration-500 w-20 m-auto p-3 z-10" 
+        icon={<ChallengesIcon color={value == 3 && "#00B2AA"} className="w-10"/>} 
+        label="CHALLENGES" {...a11yProps(3)} />
+        <StyledTab 
+        className="transition-all duration-500 w-20 m-auto p-3 z-10" 
+        icon={<EventsIcon color={value == 4 && "#00B2AA"} className="w-10"/>} 
+        label="EVENTS" {...a11yProps(4)} />
       </Tabs>
       {/* <TabPanel value={value} index={0}>
         Item One

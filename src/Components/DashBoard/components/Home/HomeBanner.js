@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import character from "../assets/images/girl.png"
+import character from "../../assets/images/girl.png"
 import "./dashboardHome.css"
 
 function HomeBanner() {

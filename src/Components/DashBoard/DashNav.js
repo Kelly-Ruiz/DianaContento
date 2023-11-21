@@ -1,40 +1,22 @@
 import React from 'react'
-import logo from "../../images/header logo.webp";
 import { Login } from '../NavBar/Components/Login/Login';
+import GearIcon from './assets/icons/toolbar/GearIcon';
+import NotificationIcon from './assets/icons/toolbar/NotificationIcon';
+import { Button, IconButton } from '@mui/material';
 
 function DashNav() {
     return (
-        <div className="flex justify-center bg-white w-full z-40">
-            <nav className="h-18 w-[70rem] ">
+        <div className="flex justify-end bg-white w-full z-40 p-2 px-5 shadow-md">
 
+            <div className="flex gap-2">
+                <IconButton className=''>
+                    <GearIcon color="#666" className="w-8" />
+                </IconButton>
+                <IconButton className=''>
+                    <NotificationIcon color="#666" className="w-8" />
+                </IconButton>
+            </div>
 
-                <ul className="py-2 w-full h-full px-4 flex justify-between items-center">
-                    <div className="flex items-center uppercase font-semibold text-gray-600">
-                        <li className="mr-4">
-                            <a className="h-10" href="/" rel="home">
-                                <img className="h-14" src={logo} alt="logo" />
-                            </a>
-                        </li>
-                        <a className="h-14 flex items-center"
-                            href="/plans"
-                        >
-                            <li className="w-28 h-full flex justify-center items-center hover:bg-[#00000020] rounded-xl transition-all duration-400">
-                                Plans
-                            </li>
-                        </a>
-                        <a className="h-14 flex items-center"
-                            href="/Aboutus">
-                            <li className="w-28 h-full flex items-center justify-center hover:bg-[#00000020] rounded-xl transition-all duration-400">
-                                About us
-                            </li>
-                        </a>
-                    </div>
-                    <li id="premiumBtn">
-
-                       
-                    </li>
-                </ul>
-            </nav>
         </div>
     )
 }
