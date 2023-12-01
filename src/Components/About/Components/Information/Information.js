@@ -3,7 +3,7 @@ import './Information.css';
 import '../../../Estilos.css';
 
 import dianaFullbody from "./Images/DianaCuerpoentero.webp"
-import { Reviews } from "../../../Plans/Components/VideoH/Reviews";
+import { Reviews } from "../Reviews/Reviews";
 
 
 function Information() {
@@ -15,7 +15,7 @@ function Information() {
                         Who is Diana Contento?
                     </h2>
                     <p className="p-4">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex eacommodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        Colombian mom of 2 boys. Journalist & Bodybuilder by passion. After suffer post partum depression with my first pregnancy I just focus on myself to work hard every day to build my mind first to be strong mentally enough to build my physical body the way I just dream it. For me Excuses are the limitations of our mind. Proud mom 42 years old and living my healthy inside our life the way I always visualize.
                     </p>
                 </div>
             </section>
